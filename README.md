@@ -4,7 +4,7 @@ Simple tryout with sklearn to train a neural network model with UCI Adult datase
 
 ### Training process:
  * Load data
- * Correlation analysis``
+ * Correlation analysis
  * Drop the columns according to the correlation results ```['fnlwgt', 'native-country', 'workclass', 'education', 'occupation']```
  * Data clean
  * Map features to numerical value
