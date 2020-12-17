@@ -1,5 +1,6 @@
 from imblearn.under_sampling import RandomUnderSampler
 import pandas as pd
+from sklearn.utils import shuffle
 
 headers = ["age", "workclass", "fnlwgt", "education", "education-num",
            "marital-status", "occupation", "relationship", "race", "sex",
@@ -17,4 +18,6 @@ print("Balanced Train dataset: {0}{1}".format(X.shape, y.shape))
 
 result = pd.concat([X, y], axis=1)
 # print(result.head())
+
+result = shuffle(result)
 result.to_csv('balanced_dataset.csv',index=False, header=False)
